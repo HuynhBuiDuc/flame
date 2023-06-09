@@ -144,23 +144,23 @@ class LevelPicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Slider(
-      value: level,
-      max: 5,
-      min: 1,
-      divisions: 4,
-      label: label,
-      onChanged: onChanged,
-    ));
+          value: level,
+          max: 5,
+          min: 1,
+          divisions: 4,
+          label: label,
+          onChanged: onChanged,
+        ));
   }
 }
 
 class CharacterButton extends StatelessWidget {
   const CharacterButton(
       {super.key,
-      required this.character,
-      this.selected = false,
-      required this.onSelectChar,
-      required this.characterWidth});
+        required this.character,
+        this.selected = false,
+        required this.onSelectChar,
+        required this.characterWidth});
 
   final Character character;
   final bool selected;
@@ -172,8 +172,8 @@ class CharacterButton extends StatelessWidget {
     return OutlinedButton(
       style: (selected)
           ? ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(
-                  const Color.fromARGB(31, 64, 195, 255)))
+          backgroundColor: MaterialStateProperty.all<Color>(
+              const Color.fromARGB(31, 64, 195, 255)))
           : null,
       onPressed: onSelectChar,
       child: Padding(
